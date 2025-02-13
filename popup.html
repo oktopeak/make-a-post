@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LN Auto Post</title>
+    <script src="dist/popup.js" defer></script>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h3>Generate LN Post</h3>
+    <label for="apiKey">OpenAI API Key: </label>
+    <input type="text" id="apiKey" placeholder="Enter your API Key" />
+    <button id="saveApiKey">Save Key</button>
+
+    <textarea
+      id="postContent"
+      placeholder="Generated post will appear here..."
+    ></textarea>
+    <button id="generate">Generate</button>
+    <button id="copy">Copy to Clipboard</button>
+  </body>
+</html>

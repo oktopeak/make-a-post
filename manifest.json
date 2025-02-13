@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "LN Auto Post",
+  "version": "1.0",
+  "description": "Grabs webpage content and posts to LinkedIn using OpenAI",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "host_permissions": ["https://api.openai.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon14.png",
+      "48": "icons/icon15.png",
+      "128": "icons/icon16.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js", "dist/popup.js"]
+    }
+  ]
+}
